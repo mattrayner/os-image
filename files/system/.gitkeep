@@ -1,0 +1,2 @@
+# Add custom files here that you want included in your OS image.
+# Files placed in the `system` subdirectory will be copied to the root (/) of your image.

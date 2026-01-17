@@ -1,0 +1,20 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
+# image will be published to ghcr.io/<user>/<name>
+name: os-image
+# description will be included in the image's metadata
+description: Custom atomic Fedora image based on wayblue/hyprland
+
+# the base image to build on top of (FROM) and the version tag to use
+base-image: ghcr.io/wayblueorg/hyprland
+image-version: latest # use latest wayblue hyprland image
+
+# module configuration, executed in order
+# you can include multiple instances of the same module
+modules:
+  - type: files
+    files:
+      - source: system
+        destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
+
+  - type: signing # this sets up the proper policy & signing files for signed images to work fully
