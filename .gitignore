@@ -1,0 +1,11 @@
+.DS_Store
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+__pycache__/
+*.pyc
+
+# Cosign private key - never commit this!
+cosign.key
